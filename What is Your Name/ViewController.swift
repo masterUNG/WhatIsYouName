@@ -9,11 +9,29 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+//    Explicit
+    var nameString: String = ""
+    
+    
+    @IBOutlet weak var displayLabel: UILabel!
+    
+    
+    @IBOutlet weak var nameTextField: UITextField!
+    
+    
+    @IBAction func changeButton(_ sender: Any) {
+        
+        nameString = nameTextField.text!
+        displayLabel.text = nameString
+        
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    }
+    }   // viewDidLoad
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -21,5 +39,5 @@ class ViewController: UIViewController {
     }
 
 
-}
+}   // Main Class
 
